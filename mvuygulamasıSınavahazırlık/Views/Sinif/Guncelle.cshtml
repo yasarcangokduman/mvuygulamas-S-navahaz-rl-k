@@ -1,0 +1,17 @@
+﻿@model Sinif
+
+<form asp-controller="sinif" asp-action="Guncelle" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="SinifId" />
+    <div class="form-group">
+        <label asp-for="SinifAdi"></label>
+        <input asp-for="SinifAdi" class="form-control"  value="@Model.SinifAdi"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="SinifKodu"></label>
+        <input asp-for="SinifKodu" class="form-control" value="@Model.SinifKodu"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Kaydet" />
+    </div>
+</form>

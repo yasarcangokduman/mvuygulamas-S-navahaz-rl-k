@@ -1,0 +1,24 @@
+﻿@model Ogrenci
+<form asp-controller="Ogrenci" asp-action="ekle" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="ogrenciAdi"></label>
+        <input asp-for="ogrenciAdi" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ogrenciSoyadi"></label>
+        <input asp-for="ogrenciSoyadi" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SinifId">Öğrenci Id</label>
+        <select name="SinifId" class="form-control" asp-items="@(new SelectList(ViewBag.Siniflar,"Value","Text"))">
+            <option value="">
+               
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Kaydet" />
+       
+    </div>
+</form>
